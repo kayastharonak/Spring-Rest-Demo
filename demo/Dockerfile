@@ -14,6 +14,8 @@ RUN git clone https://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@github.com/kayast
 
 RUN cd Spring-Rest-Demo/demo/
 
+RUN ls
+
 RUN mvn clean install
 
 RUN cd /target
