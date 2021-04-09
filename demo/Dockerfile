@@ -12,6 +12,8 @@ RUN apt-get install -y git
 
 RUN git clone https://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@github.com/kayastharonak/Spring-Rest-Demo
 
+RUN cd /Spring-Rest-Demo
+
 RUN cd /demo
 
 RUN mvn clean install
