@@ -12,13 +12,7 @@ RUN apt-get install -y git
 
 RUN git clone https://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@github.com/kayastharonak/Spring-Rest-Demo
 
-RUN cd 'Spring-Rest-Demo/demo' && mvn clean install
+RUN cd /Spring-Rest-Demo/demo && mvn clean install
 
-RUN cd Spring-Rest-Demo/demo/target && ls
-
-ARG JAR_FILE=Spring-Rest-Demo/demo/target/demo-0.0.1-SNAPSHOT.jar
-
-COPY ${JAR_FILE} demo-0.0.1-SNAPSHOT.jar
-
-ENTRYPOINT ["java","-jar","/demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/Spring-Rest-Demo/demo/target/demo-0.0.1-SNAPSHOT.jar"]
 
