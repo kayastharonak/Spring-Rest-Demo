@@ -16,7 +16,9 @@ RUN cd 'Spring-Rest-Demo/demo' && mvn clean install
 
 RUN cd Spring-Rest-Demo/demo/target && ls
 
-COPY Spring-Rest-Demo/demo/target/demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=Spring-Rest-Demo/demo/target/demo-0.0.1-SNAPSHOT.jar
+
+COPY ${JAR_FILE} demo-0.0.1-SNAPSHOT.jar
 
 ENTRYPOINT ["java","-jar","/demo-0.0.1-SNAPSHOT.jar"]
 
