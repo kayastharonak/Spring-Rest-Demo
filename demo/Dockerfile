@@ -10,13 +10,11 @@ RUN apt-get install -y maven
 
 RUN apt-get install -y git
 
-RUN cd 'home'
-
 RUN git clone https://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@github.com/kayastharonak/Spring-Rest-Demo
 
 RUN cd 'Spring-Rest-Demo/demo' && mvn clean install
 
-COPY Spring-Rest-Demo/demo/demo-0.0.1-SNAPSHOT.jar' demo-0.0.1-SNAPSHOT.jar
+COPY Spring-Rest-Demo/demo/demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar
 
 ENTRYPOINT ["java","-jar","/demo-0.0.1-SNAPSHOT.jar"]
 
